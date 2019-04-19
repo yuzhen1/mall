@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Car;
 use App\Detail;
-use App\OrderAddress;
+use App\Order;
 use App\Address;
 use App\Good;
 
@@ -199,9 +199,11 @@ class CarController extends Controller
             'user_id' => session('login')['user_id'],
             'pay_way' => $data['pay_way'],
             'order_amount' => $order_amount,
-            'create_time' => time()
+            'create_time' => time(),
+            'update_time'=>time()
         ];
-        $res1 = DB::table('order')->insert($orderInfo);
+        $order_model = new Order;
+        $res1 =$order_model->insert($orderInfo);
         $order_id = DB::getPdo()->lastInsertId($res1);
         if (!$res1) {
             echo "订单信息写入失败";

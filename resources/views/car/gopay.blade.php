@@ -41,7 +41,7 @@
     <td class="dingimg" width="75%" colspan="2">
      <select style="width:500px" id="pay_way">
       <option value=''>--请选择支付方式--</option>
-      <option value="1">支付宝</option>
+      <option value="1">微信</option>
      </select>
     </td>
    </tr>

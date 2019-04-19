@@ -34,7 +34,7 @@
       <tr>
        <td width="50%"><a href="prolist.html" class="jiesuan" style="background:#5ea626;">继续购物</a></td>
        <td width="50%">
-           <a href="/car/phonepay/{{$v->order_no}}" class="jiesuan">立即支付</a>
+           <a href="/wxpay/goes/{{$v->order_no}}" class="jiesuan">立即支付</a>
        </td>
       </tr>
      </table>

@@ -55,9 +55,9 @@ class IndexController extends Controller
         if($info){
             return redirect('index/register')->with('message','该邮箱已注册');exit;
         }
-        if($data['code']!=session('code')['code']){
-            return redirect('index/register')->with('message','验证码错误');exit;
-        }
+//        if($data['code']!=session('code')['code']){
+//            return redirect('index/register')->with('message','验证码错误');exit;
+//        }
         $data['user_pwd']=encrypt($data['user_pwd']);
         unset($data['_token']);
         unset($data['repwd']);

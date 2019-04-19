@@ -51,7 +51,8 @@ Route::post('address/getArea','AddressController@getArea');
 Route::post('address/addressDo','AddressController@addressDo');
 Route::match(['get','post'],'address/addresslist','AddressController@addresslist');//地址管理
 
-
+//微信支付
+Route::get('/wxpay/goes/{id}','WxPayController@goes');
 
 //个人中心
 Route::get('my/index','MyController@index');
